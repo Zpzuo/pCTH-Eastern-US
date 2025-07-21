@@ -1,0 +1,4 @@
+#!/bin/csh
+module load matlab/2023a
+matlab -nodisplay -nojvm -singleCompThread -r "C001_pcth_1_map($1,$2),exit"
+# keep this line to ensure newline

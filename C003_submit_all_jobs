@@ -1,0 +1,12 @@
+#!/bin/csh
+
+#./submit_job
+#chmod +x
+foreach fgrp_cd (`seq 500 1 500`)
+    foreach sample_cd (`seq 101 1 1000`)
+
+        qsub -V -j y -l h_rt=1:00:00 -l mem_per_core=16G -l buyin ./C002_run_job_once $fgrp_cd $sample_cd
+
+    end
+end
+# keep this line to ensure newline
